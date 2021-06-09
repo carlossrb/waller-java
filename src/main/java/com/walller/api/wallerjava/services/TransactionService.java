@@ -48,7 +48,7 @@ interface TransactionServiceInterface {
 
 @Service
 public class TransactionService implements TransactionServiceInterface {
-    private float yieldRate = (float) 0.003; // taxa de rendimento
+    private final float yieldRate = (float) 0.003; // taxa de rendimento
 
     @Autowired
     private TransactionRepository transRepo;
