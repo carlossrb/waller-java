@@ -47,17 +47,14 @@ interface TransactionServiceInterface {
 }
 
 @Service
-public class TransactionService implements TransactionServiceInterface {
+public class TransactionService extends AccountService implements TransactionServiceInterface {
     private final float yieldRate = (float) 0.003; // taxa de rendimento
 
     @Autowired
     private TransactionRepository transRepo;
 
-    @Autowired
-    private AccountService accountService;
-
     public TransactionEntity makeDeposit(Integer id, float amount) throws Exception {
-        AccountEntity acc = accountService.getAccountBalance(id);
+        AccountEntity acc = super.getAccountBalance(id);
 
         // add um depósito
         TransactionEntity entity = new TransactionEntity();
@@ -70,7 +67,7 @@ public class TransactionService implements TransactionServiceInterface {
     }
 
     public TransactionEntity makeWithdrawal(Integer id, float amount) throws Exception {
-        AccountEntity acc = accountService.getAccountBalance(id);
+        AccountEntity acc = super.getAccountBalance(id);
 
         if (acc.getAccountTotal() < amount) {
             throw new Exception("Insufficient funds");
@@ -88,7 +85,7 @@ public class TransactionService implements TransactionServiceInterface {
     }
 
     public TransactionEntity makePayment(Integer id, float amount, String destinationAccount) throws Exception {
-        AccountEntity acc = accountService.getAccountBalance(id);
+        AccountEntity acc = super.getAccountBalance(id);
 
         if (acc.getAccountTotal() < amount) {
             throw new Exception("Insufficient funds");

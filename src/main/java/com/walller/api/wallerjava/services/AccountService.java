@@ -69,6 +69,8 @@ public class AccountService implements AccountServiceInterface {
     private AccountRepository accountRepo;
     Integer id;
 
+    // Construtores caso queira instanciar a classe em algum momento em outro local
+    // do projeto para obtencão e add de user, por ex
     public AccountService(Integer id) {
         this.id = id;
     }
