@@ -1,9 +1,9 @@
 package com.walller.api.wallerjava.services;
 
 import com.walller.api.wallerjava.Models.TransactionEntity;
+import com.walller.api.wallerjava.Repositories.TransactionRepository;
 import com.walller.api.wallerjava.Models.AccountEntity;
 import com.walller.api.wallerjava.Models.OperationStatus;
-import com.walller.api.wallerjava.repositories.TransactionRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

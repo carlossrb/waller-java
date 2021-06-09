@@ -2,7 +2,7 @@ package com.walller.api.wallerjava.controllers;
 
 import java.util.List;
 import com.walller.api.wallerjava.Models.*;
-import com.walller.api.wallerjava.repositories.AccountRepository;
+import com.walller.api.wallerjava.Repositories.AccountRepository;
 import com.walller.api.wallerjava.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

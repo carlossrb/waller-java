@@ -7,7 +7,7 @@ import javax.persistence.EntityNotFoundException;
 import com.walller.api.wallerjava.Models.AccountEntity;
 import com.walller.api.wallerjava.Models.OperationStatus;
 import com.walller.api.wallerjava.Models.TransactionEntity;
-import com.walller.api.wallerjava.repositories.AccountRepository;
+import com.walller.api.wallerjava.Repositories.AccountRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

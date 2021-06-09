@@ -1,4 +1,4 @@
-package com.walller.api.wallerjava.repositories;
+package com.walller.api.wallerjava.Repositories;
 import com.walller.api.wallerjava.Models.TransactionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
