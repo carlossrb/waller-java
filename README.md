@@ -14,7 +14,7 @@ O projeto obedece, em partes, um padrão MVC de arquitetura. Isto é: model, vie
 
 Os services, por sua vez, é onde se realizam todos os cálculos referentes às regras de negócio. Isto é, todo o coração do projeto se encontra nele. Neste projeto temos dois services. Um responsável por cadastro de novos usuários e outro pelas transações referentes a estes usuários.
 
-Os models é onde ficam armazenadas as entidades. As entidades são classes que determinam a forma que as tabelas do banco irão ser. O Spring JPA utiliza dessas entidades de classe, extendendo-as para criar os repositórios. Estes repositórios são interfaces que são utilizadas para facilitar as queries (insert, select, update...) no banco de dados.
+Os models é onde ficam armazenadas as entidades. As entidades são classes que determinam a forma que as tabelas do banco irão ser. O Spring JPA utiliza dessas entidades de classe, estendendo-as para criar os repositórios. Estes repositórios são interfaces que são utilizadas para facilitar as queries (insert, select, update...) no banco de dados.
 
 O sistema conta com *decorators*, onde alguns são *açucares sintáticos* para facilitar a leitura e interpretação do código, todavia, outros atribuem funcionalidades aos métodos e classes e delegam funções essenciais na hora da compilação do projeto, como exemplo do `@Autowired` e `@GetMapping()` usados nos controllers para injeção de atributos não nulos na classe e para roteamento http, respectivamente.
 
