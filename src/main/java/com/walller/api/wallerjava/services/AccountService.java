@@ -76,7 +76,6 @@ public class AccountService implements AccountServiceInterface {
     public AccountService() {
     }
 
-    @Override
     public AccountEntity getAccountBalance(Integer id) throws Exception {
         AccountEntity acc = this.getUserAccount(id);
 
@@ -100,7 +99,6 @@ public class AccountService implements AccountServiceInterface {
         return this.updateAccount(accountTotal, totalWithdrawal, accountTotalNoYieldRate, id);
     }
 
-    @Override
     public AccountEntity updateAccount(float accountTotal, float totalWithdrawal, float accountTotalNoYieldRate,
             Integer id) {
         AccountEntity acc = accountRepo.findById(id).get();
@@ -110,17 +108,14 @@ public class AccountService implements AccountServiceInterface {
         return accountRepo.save(acc);
     }
 
-    @Override
     public AccountEntity addUserAccount(AccountEntity account) {
         return accountRepo.save(account);
     }
 
-    @Override
     public AccountEntity getUserAccount(Integer id) throws Exception {
         return accountRepo.findById(id).orElseThrow(() -> new EntityNotFoundException("Account not found!"));
     }
 
-    @Override
     public AccountEntity getUserAccount() throws Exception {
         return accountRepo.findById(this.id).orElseThrow(() -> new EntityNotFoundException("Account not found!"));
     }
